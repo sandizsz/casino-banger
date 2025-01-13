@@ -35,8 +35,8 @@ const rajdhani = Rajdhani({
 })
 
 export const metadata: Metadata = {
-  title: "LocoBonus",
-  description: "Best offers 2024 by Locobonus",
+  title: "Bangerslots",
+  description: "Best offers 2024 by Bangerslots",
   icons: {
     icon: '/images/loco-bonus.ico',
   },

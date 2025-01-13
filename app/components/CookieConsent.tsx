@@ -34,8 +34,8 @@ const CookieConsentBanner = () => {
       containerClasses="fixed-cookie-banner"
       buttonWrapperClasses="cookie-buttons"
       buttonStyle={{
-        background: "#e50914",
-        color: "white",
+        background: "#C1FF72",
+        color: "black",
         fontSize: "15px",
         borderRadius: "6px",
         padding: "12px 24px",
@@ -48,7 +48,7 @@ const CookieConsentBanner = () => {
       }}
       declineButtonStyle={{
         background: "transparent",
-        border: "2px solid #e50914",
+        border: "2px solid #C1FF72",
         color: "white",
         fontSize: "15px",
         borderRadius: "6px",
@@ -76,7 +76,7 @@ const CookieConsentBanner = () => {
           href="/cookie-policy" 
           style={{ 
             textDecoration: "underline",
-            color: "#e50914",
+            color: "#C1FF72",
             fontWeight: "500",
             whiteSpace: "nowrap",
           }}

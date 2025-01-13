@@ -50,12 +50,12 @@ export const casinoGuidesData = {
   content: `
     <div class="space-y-12 py-12">
       ${gameGuides.map(guide => `
-        <div class="bg-[#1A1F2C] border border-[#FF1745]/20 rounded-2xl p-8 hover:border-[#FF1745]/40 transition-colors">
+        <div class="bg-[#1A1F2C] border border-[#C1FF72]/20 rounded-2xl p-8 hover:border-[#C1FF72]/40 transition-colors">
           <p class="text-md uppercase tracking-wider text-gray-400 game-guide-label">Game guides</p>
           <h2 class="text-5xl font-bold mb-4">${guide.title}</h2>
-          <div class="w-24 h-1 bg-[#FF1745] mb-6"></div>
+          <div class="w-24 h-1 bg-[#C1FF72] mb-6"></div>
           <p class="text-gray-300 mb-8">${guide.description}</p>
-          <a href="/${guide.slug}" class="inline-block bg-[#FF1745] text-white px-8 py-3 font-bold hover:bg-[#FF1745]/80 transition-colors rounded-lg">READ MORE</a>
+          <a href="/${guide.slug}" class="inline-block bg-[#C1FF72] text-black px-8 py-3 font-bold hover:bg-[#C1FF72]/80 transition-colors rounded-lg">READ MORE</a>
         </div>
       `).join('')}
     </div>
@@ -77,17 +77,17 @@ export const paymentMethodsData = {
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         <div class="bg-[#1A1F2C] rounded-xl p-6 hover:scale-105 transition-transform">
-          <svg class="w-12 h-12 text-[#FFDD00] mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+          <svg class="w-12 h-12 text-[#C1FF72] mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
           <h3 class="text-xl font-bold mb-2">Fast Transactions</h3>
           <p>Quick deposits and withdrawals with instant processing for most payment methods</p>
         </div>
         <div class="bg-[#1A1F2C] rounded-xl p-6 hover:scale-105 transition-transform">
-          <svg class="w-12 h-12 text-[#FFDD00] mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <svg class="w-12 h-12 text-[#C1FF72] mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           <h3 class="text-xl font-bold mb-2">Secure & Safe</h3>
           <p>Advanced encryption and security measures protect all transactions</p>
         </div>
         <div class="bg-[#1A1F2C] rounded-xl p-6 hover:scale-105 transition-transform">
-          <svg class="w-12 h-12 text-[#FFDD00] mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.85.83 6.72 2.24"/><path d="M21 3v4h-4"/></svg>
+          <svg class="w-12 h-12 text-[#C1FF72] mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.85.83 6.72 2.24"/><path d="M21 3v4h-4"/></svg>
           <h3 class="text-xl font-bold mb-2">24/7 Support</h3>
           <p>Round-the-clock assistance for all payment-related issues</p>
         </div>

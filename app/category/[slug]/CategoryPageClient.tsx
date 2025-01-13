@@ -35,7 +35,7 @@ export default function CategoryPageClient({ initialCasinos, initialCategory }: 
     <div className="min-h-screen from-[#1A1A1A] to-[#0D0D0D]">
       <AnimatedSection className="w-full py-20 bg-gradient-to-b from-[#1A1A1A] to-[#0D0D0D] relative overflow-hidden">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-6xl font-['Orbitron'] font-bold text-center text-[#FF1745] [text-shadow:_0_0_30px_#FF1745] mb-4">
+          <h1 className="text-4xl md:text-6xl font-['Orbitron'] font-bold text-center text-[#C1FF72] [text-shadow:_0_0_30px_#C1FF72] mb-4">
             {category.title}
           </h1>
           {category.description && (

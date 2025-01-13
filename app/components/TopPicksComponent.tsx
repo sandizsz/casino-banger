@@ -38,7 +38,7 @@ const TopPicksComponent = ({ casinos }: TopPicksComponentProps) => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            <span className="bg-gradient-to-r from-[#FF1745] to-[#D90429] text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-[#C1FF72] to-[#C1FF72] text-transparent bg-clip-text">
               Hand-Picked
             </span> Top Deals
           </h2>
@@ -53,11 +53,11 @@ const TopPicksComponent = ({ casinos }: TopPicksComponentProps) => {
               className="group relative bg-gradient-to-br from-[#1E1E1E] to-[#2B2B2B] rounded-2xl hover:-translate-y-2 transition-transform duration-300"
             >
               {/* Spotlight Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#FF1745]/20 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#C1FF72]/20 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-300" />
               
               {/* Category Badge */}
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                <div className="bg-gradient-to-r from-[#FF1745] to-[#D90429] text-white text-sm font-bold px-8 py-1.5 rounded-full shadow-lg min-w-[180px] text-center whitespace-nowrap">
+                <div className="bg-gradient-to-r from-[#C1FF72] to-[#C1FF72] text-black text-sm font-bold px-8 py-1.5 rounded-full shadow-lg min-w-[180px] text-center whitespace-nowrap">
                   {casino.tags?.[0]?.title || tagOrder[index].toUpperCase()}
                 </div>
               </div>
@@ -79,10 +79,10 @@ const TopPicksComponent = ({ casinos }: TopPicksComponentProps) => {
                 {/* Text Content */}
                 <div className="flex flex-col flex-grow">
                   <div className="space-y-4">
-                    <h3 className="text-white text-lg font-medium line-clamp-1 group-hover:text-[#FF1745] transition-colors">
+                    <h3 className="text-white text-lg font-medium line-clamp-1 group-hover:text-[#C1FF72] transition-colors">
                       {casino.offerTitle}
                     </h3>
-                    <p className="text-[#FF1745] text-sm font-bold">
+                    <p className="text-[#C1FF72] text-sm font-bold">
                       {casino.offerDescription}
                     </p>
                   </div>
@@ -98,7 +98,7 @@ const TopPicksComponent = ({ casinos }: TopPicksComponentProps) => {
                     {casino.termsConditionsUrl && (
                       <Link 
                         href={casino.termsConditionsUrl}
-                        className="relative text-[10px] text-center text-gray-400 hover:text-[#FF1745] transition-colors z-20"
+                        className="relative text-[10px] text-center text-gray-400 hover:text-[#C1FF72] transition-colors z-20"
                       >
                         Terms & Conditions Apply
                       </Link>

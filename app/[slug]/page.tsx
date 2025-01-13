@@ -67,7 +67,7 @@ export default async function Page({ params }: PageProps) {
               />
             </div>
           ) : (
-            <h1 className="text-5xl font-bold mb-8 text-[#FF1745] [text-shadow:_0_0_30px_#FF1745]">
+            <h1 className="text-5xl font-bold mb-8 text-[#C1FF72] [text-shadow:_0_0_30px_#C1FF72]">
               {page.title}
             </h1>
           )}

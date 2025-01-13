@@ -129,14 +129,14 @@ const CasinoComponent: React.FC<CasinoProps> = ({ casino, index, categorySlug })
           <div className="flex flex-col items-end">
             <div className="flex items-center gap-1 mb-1">
               <span className="text-sm text-gray-400">Score:</span>
-              <span className="text-sm font-medium text-[#FF1745]">{getScoreText(casino.rating)}</span>
+              <span className="text-sm font-medium text-[#C1FF72]">{getScoreText(casino.rating)}</span>
             </div>
             <div className="w-[80px] h-[50px]">
               <GaugeComponent
                 id={`gauge-${casino._id}`}
                 type="semicircle"
                 arc={{
-                  colorArray: ['#FF1745'],
+                  colorArray: ['#C1FF72'],
                   subArcs: [{
                     limit: 10,
                     color: '#2B2B2B',
@@ -182,8 +182,8 @@ const CasinoComponent: React.FC<CasinoProps> = ({ casino, index, categorySlug })
         </div>
 
         {/* Position Number */}
-        <div className="z-10 absolute -top-px -left-px w-9 h-9 flex items-center justify-center bg-[#FF1745] rounded-tl-lg rounded-br-lg border-r-2 border-b-2 border-[#FF1745] shadow-[4px_4px_20px_rgba(255,23,69,0.3)]">
-          <span className="font-['Orbitron'] font-bold text-[12px] text-white [text-shadow:_0_0_10px_rgba(255,255,255,0.5)]">
+        <div className="z-10 absolute -top-px -left-px w-9 h-9 flex items-center justify-center bg-[#C1FF72] rounded-tl-lg rounded-br-lg border-r-2 border-b-2 border-[#C1FF72] shadow-[4px_4px_20px_rgba(193,255,114,0.3)]">
+          <span className="font-['Orbitron'] font-bold text-[12px] text-black [text-shadow:_0_0_10px_rgba(255,255,255,0.5)]">
             #{casino.orderRank || index + 1}
           </span>
         </div>
@@ -205,7 +205,7 @@ const CasinoComponent: React.FC<CasinoProps> = ({ casino, index, categorySlug })
           
           {mounted && isPaymentDropdownOpen && createPortal(
             <div 
-              className="absolute bg-[#2B2B2B] border border-[#FF1745]/10 rounded-lg shadow-lg z-[40]"
+              className="absolute bg-[#2B2B2B] border border-[#C1FF72]/10 rounded-lg shadow-lg z-[40]"
               style={{
                 top: `${dropdownPosition.top}px`,
                 left: `${dropdownPosition.left}px`,
@@ -251,7 +251,7 @@ const CasinoComponent: React.FC<CasinoProps> = ({ casino, index, categorySlug })
                 href={casino.termsConditionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-gray-400 hover:text-[#FF1745] transition-colors"
+                className="text-xs text-gray-400 hover:text-[#C1FF72] transition-colors"
               >
                 T&Cs Apply
               </a>

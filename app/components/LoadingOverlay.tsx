@@ -47,7 +47,7 @@ export default function LoadingOverlay() {
                   repeat: Infinity,
                   delay: 0
                 }}
-                className="w-3 h-3 bg-[#D90429] rounded-full"
+                className="w-3 h-3 bg-[#C1FF72] rounded-full"
               />
               <motion.div
                 animate={{
@@ -59,7 +59,7 @@ export default function LoadingOverlay() {
                   repeat: Infinity,
                   delay: 0.2
                 }}
-                className="w-3 h-3 bg-[#D90429] rounded-full"
+                className="w-3 h-3 bg-[#C1FF72] rounded-full"
               />
               <motion.div
                 animate={{
@@ -71,7 +71,7 @@ export default function LoadingOverlay() {
                   repeat: Infinity,
                   delay: 0.4
                 }}
-                className="w-3 h-3 bg-[#D90429] rounded-full"
+                className="w-3 h-3 bg-[#C1FF72] rounded-full"
               />
             </div>
           </div>

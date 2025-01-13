@@ -19,7 +19,7 @@ export function NavbarClient({ categories }: NavbarClientProps) {
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute w-[300px] h-[300px] rounded-full bg-[#FF1745] blur-[150px] -top-48 -left-24"></div>
+          <div className="absolute w-[300px] h-[300px] rounded-full bg-[#C1FF72] blur-[150px] -top-48 -left-24"></div>
         </div>
        
       </div>
@@ -47,7 +47,7 @@ export function NavbarClient({ categories }: NavbarClientProps) {
             {/* Right - Burger Menu */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="relative z-50 flex items-center space-x-3 px-4 py-2.5 rounded-full bg-gradient-to-r from-[#1A1A1A] to-[#242424] hover:from-[#FF1745] hover:to-[#FF4D6B] backdrop-blur-sm border border-[#FF1745]/20 group transition-all duration-300"
+              className="relative z-50 flex items-center space-x-3 px-4 py-2.5 rounded-full bg-gradient-to-r from-[#1A1A1A] to-[#242424] hover:from-[#C1FF72] hover:to-[#C1FF72] backdrop-blur-sm border border-[#C1FF72]/20 group transition-all duration-300"
               aria-label="Toggle menu"
             >
               <span className="text-[#C0C0C0] group-hover:text-white font-medium tracking-wide transition-colors duration-300">Menu</span>
@@ -75,15 +75,15 @@ export function NavbarClient({ categories }: NavbarClientProps) {
           <div className="hidden lg:flex flex-1 items-center">
             {/* Left side - Casino Categories */}
             <div className="flex-1 flex justify-start">
-              <div className="flex space-x-1 bg-[#1A1A1A]/50 backdrop-blur-sm rounded-full border border-[#FF1745]/10 p-1">
+              <div className="flex space-x-1 bg-[#1A1A1A]/50 backdrop-blur-sm rounded-full border border-[#C1FF72]/10 p-1">
                 {categories.map((category) => (
                   <Link
                     key={category._id}
                     href={`/category/${category.slug.current}`}
                     className={`whitespace-nowrap px-2.5 lg:px-3 py-1.5 rounded-full text-sm lg:text-base font-['Rajdhani'] font-semibold transition-all duration-300 ${
                       pathname === `/category/${category.slug.current}`
-                        ? "bg-[#FF1745] text-white shadow-[0_0_20px_rgba(255,23,69,0.3)]"
-                        : "text-[#C0C0C0] hover:text-white hover:bg-[#FF1745]/10"
+                        ? "bg-[#C1FF72] text-black shadow-[0_0_20px_rgba(193,255,114,0.3)]"
+                        : "text-[#C0C0C0] hover:text-white hover:bg-[#C1FF72]/10"
                     }`}
                   >
                     {category.title}
@@ -110,7 +110,7 @@ export function NavbarClient({ categories }: NavbarClientProps) {
 
             {/* Right side - Other Pages */}
             <div className="flex-1 flex justify-end">
-              <div className="flex space-x-1 bg-[#1A1A1A]/50 backdrop-blur-sm rounded-full border border-[#FF1745]/10 p-1">
+              <div className="flex space-x-1 bg-[#1A1A1A]/50 backdrop-blur-sm rounded-full border border-[#C1FF72]/10 p-1">
                 {[
                   { href: "/game-guides", label: "Game Guides" },
                   { href: "/gambling-advice", label: "Gambling Advice" }
@@ -120,8 +120,8 @@ export function NavbarClient({ categories }: NavbarClientProps) {
                     href={item.href}
                     className={`whitespace-nowrap px-2.5 lg:px-3 py-1.5 rounded-full text-sm lg:text-base font-['Rajdhani'] font-semibold transition-all duration-300 ${
                       pathname === item.href
-                        ? "bg-[#FF1745] text-white shadow-[0_0_20px_rgba(255,23,69,0.3)]"
-                        : "text-[#C0C0C0] hover:text-white hover:bg-[#FF1745]/10"
+                        ? "bg-[#C1FF72] text-black shadow-[0_0_20px_rgba(193,255,114,0.3)]"
+                        : "text-[#C0C0C0] hover:text-white hover:bg-[#C1FF72]/10"
                     }`}
                   >
                     {item.label}
@@ -144,12 +144,12 @@ export function NavbarClient({ categories }: NavbarClientProps) {
                 onClick={() => setIsMenuOpen(false)}
                 className={`text-2xl font-['Rajdhani'] font-semibold transition-all duration-300 relative group ${
                   pathname === `/category/${category.slug.current}`
-                    ? "text-[#FF1745]"
+                    ? "text-[#C1FF72]"
                     : "text-[#C0C0C0]"
                 }`}
               >
                 {category.title}
-                <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-[#FF1745] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-[#C1FF72] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </Link>
             ))}
             
@@ -163,12 +163,12 @@ export function NavbarClient({ categories }: NavbarClientProps) {
                 onClick={() => setIsMenuOpen(false)}
                 className={`text-2xl font-['Rajdhani'] font-semibold transition-all duration-300 relative group ${
                   pathname === item.href
-                    ? "text-[#FF1745]"
+                    ? "text-[#C1FF72]"
                     : "text-[#C0C0C0]"
                 }`}
               >
                 {item.label}
-                <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-[#FF1745] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-[#C1FF72] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </Link>
             ))}
           </div>
