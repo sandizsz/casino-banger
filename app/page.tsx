@@ -93,80 +93,102 @@ export default async function Home() {
     <div className="min-h-screen bg-[#0D0D0D] text-white">
       <main className="relative">
         {/* Hero Section */}
-        <AnimatedSection className="w-full min-h-[80vh] py-20 bg-gradient-to-b from-[#1A1A1A] via-[#0D0D0D] to-[#0D0D0D] relative overflow-hidden flex items-center">
-          {/* Animated background elements */}
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute w-[500px] h-[500px] rounded-full bg-[#C1FF72] blur-[150px] -top-48 -left-24 animate-pulse"></div>
-              <div className="absolute w-[400px] h-[400px] rounded-full bg-[#C1FF72] blur-[150px] -bottom-32 -right-16 animate-pulse delay-700"></div>
+        <AnimatedSection className="relative min-h-screen bg-[#0D0D0D] overflow-hidden">
+          {/* Animated Shapes */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute w-[800px] h-[800px] -top-1/4 -right-1/4 animate-slow-spin">
+              <div className="w-full h-full border border-[#C1FF72]/10 rounded-full"></div>
+              <div className="absolute inset-4 border border-[#C1FF72]/10 rounded-full"></div>
+              <div className="absolute inset-8 border border-[#C1FF72]/10 rounded-full"></div>
             </div>
-            <div className="absolute inset-0" style={{
-              backgroundImage: `
-                radial-gradient(circle at 20% 35%, rgba(193, 255, 114, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 75% 44%, rgba(193, 255, 114, 0.1) 0%, transparent 50%)
-              `
-            }}></div>
-           
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C1FF72]/5 blur-[120px] rounded-full"></div>
           </div>
 
-          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              <div className="flex-1 text-center lg:text-left space-y-8">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C1FF72]/10 border border-[#C1FF72]/20 ">
-                  <Sparkles className="w-4 h-4 text-[#C1FF72]" />
-                  <span className="text-sm font-medium text-[#C1FF72]"> First class online casino experience and bonuses offered by leading industry professionals</span>
-                </div>
-                
-                <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                  <div>Compare Online </div>
-                  <div>
-                  Casino Sites in
-                    <div className="relative inline-block ml-2">
-                      <span className="text-[#C1FF72]">2025</span>
-                      <div className="absolute -bottom-2 left-0 w-full h-1 bg-[#C1FF72]/30 rounded-full"></div>
-                    </div>
-                  </div>
+          {/* Content */}
+          <div className="relative z-10 container mx-auto px-4">
+            <div className="min-h-screen flex flex-col justify-center items-center -mt-20">
+              {/* Logo Section */}
+              <div className="w-full max-w-[220px] mb-4">
+                <Image
+                  src="/images/loco-bonus.png"
+                  alt="BangerSlots"
+                  width={220}
+                  height={110}
+                  className="w-full h-auto"
+                  priority
+                />
+              </div>
+
+              {/* Main Text */}
+              <div className="text-center max-w-4xl mx-auto space-y-4 mb-6">
+                <h1 className="text-[4.5rem] font-bold leading-none">
+                  <span className="text-white">Level Up </span>
+                  <span className="text-[#C1FF72]">Your Game</span>
                 </h1>
-
-                <p className="text-xl max-w-2xl mx-auto lg:mx-0 text-gray-400 leading-relaxed">
-                Bangerslots is your go-to site for finding the best online casinos. We rate and offer as many of the best, trustworthy and popular gambling sites out there to help you make better gambling choices. 
+                <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                  Your ultimate destination for casino entertainment and expert gaming strategies
                 </p>
+              </div>
 
-                <div className="flex flex-wrap gap-6 items-center justify-center lg:justify-start">
-                  <div className="flex items-center gap-8">
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-[#C1FF72]">
-                        500+
-                      </div>
-                      <div className="text-sm text-gray-400">Casino Reviews</div>
-                    </div>
-                    <div className="h-12 w-[1px] bg-gray-800"></div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-[#C1FF72]">
-                        98%
-                      </div>
-                      <div className="text-sm text-gray-400">Trusted Ratings</div>
-                    </div>
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <Link 
+                  href="/category/all-bonuses"
+                  className="group relative px-8 py-4 bg-[#C1FF72] text-black font-bold text-lg rounded-xl overflow-hidden transition-transform hover:scale-105"
+                >
+                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                  <span className="relative flex items-center justify-center">
+                    Explore Top Casinos
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+                <Link 
+                  href="/game-guides"
+                  className="group px-8 py-4 bg-transparent border-2 border-[#C1FF72]/20 hover:border-[#C1FF72]/40 text-white font-bold text-lg rounded-xl transition-colors"
+                >
+                  <span className="flex items-center justify-center">
+                    Game Guides
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div className="relative group cursor-pointer">
+                  <div className="absolute inset-0 bg-[#C1FF72]/10 blur-xl rounded-lg group-hover:bg-[#C1FF72]/20 transition-colors"></div>
+                  <div className="relative text-center p-4">
+                    <div className="text-3xl font-bold text-[#C1FF72] mb-2 group-hover:scale-110 transition-transform">10+</div>
+                    <div className="text-sm text-gray-400">Game Categories</div>
+                  </div>
+                </div>
+                <div className="relative group cursor-pointer">
+                  <div className="absolute inset-0 bg-[#C1FF72]/10 blur-xl rounded-lg group-hover:bg-[#C1FF72]/20 transition-colors"></div>
+                  <div className="relative text-center p-4">
+                    <div className="text-3xl font-bold text-[#C1FF72] mb-2 group-hover:scale-110 transition-transform">100%</div>
+                    <div className="text-sm text-gray-400">Secure Gaming</div>
+                  </div>
+                </div>
+                <div className="relative group cursor-pointer">
+                  <div className="absolute inset-0 bg-[#C1FF72]/10 blur-xl rounded-lg group-hover:bg-[#C1FF72]/20 transition-colors"></div>
+                  <div className="relative text-center p-4">
+                    <div className="text-3xl font-bold text-[#C1FF72] mb-2 group-hover:scale-110 transition-transform">24/7</div>
+                    <div className="text-sm text-gray-400">Support</div>
+                  </div>
+                </div>
+                <div className="relative group cursor-pointer">
+                  <div className="absolute inset-0 bg-[#C1FF72]/10 blur-xl rounded-lg group-hover:bg-[#C1FF72]/20 transition-colors"></div>
+                  <div className="relative text-center p-4">
+                    <div className="text-3xl font-bold text-[#C1FF72] mb-2 group-hover:scale-110 transition-transform">50+</div>
+                    <div className="text-sm text-gray-400">Expert Guides</div>
                   </div>
                 </div>
               </div>
 
-              <div className="flex-1 relative">
-                <div className="relative w-full aspect-square max-w-[500px] mx-auto">
-                  {/* Outer spinning ring */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#C1FF72]/20 to-transparent rounded-full spin-slow"></div>
-                  {/* Inner spinning ring */}
-                  <div className="absolute inset-4 bg-gradient-to-br from-[#C1FF72]/10 to-transparent rounded-full spin-slow-delayed"></div>
-                  {/* Logo container */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Image
-                      src="/images/loco-bonus.png"
-                      alt="Casino Illustration"
-                      width={300}
-                      height={300}
-                      className="object-contain pulsate"
-                    />
-                  </div>
+              {/* Scroll Indicator */}
+              <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+                <div className="w-6 h-10 rounded-full border-2 border-[#C1FF72]/30 flex items-start justify-center p-2">
+                  <div className="w-1 h-3 bg-[#C1FF72] rounded-full animate-scroll"></div>
                 </div>
               </div>
             </div>
@@ -185,20 +207,70 @@ export default async function Home() {
         </section>
 
         {/* New Informational Section */}
-        <AnimatedSection className="w-full py-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/dice.jpg')] bg-cover bg-center opacity-20 blur-sm"></div>
-          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-            <h2 className="text-4xl font-bold text-center mb-6 text-white drop-shadow-lg">
-              Discover the Best Online Casinos
-            </h2>
-            <p className="text-xl text-gray-200 leading-relaxed text-center mb-12">
-              As legal gambling activities become increasingly popular in the world, the best online casinos entice players with many attractive features. They will let you play casino games for real money and claim deposit bonuses, including a lucrative welcome bonus for new players. Read our Game Guides and Gambling Advice so you are fully equipped with knowledge when jumping into the world of online casinos!
-            </p>
-            <div className="flex justify-center">
-              <Link href="/guides" className="inline-flex items-center px-6 py-3 rounded-lg bg-[#C1FF72] hover:bg-[#C1FF72]/80 text-black font-semibold transition-colors duration-300">
-                Explore Our Guides
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+        <AnimatedSection className="relative py-24 overflow-hidden">
+          {/* Background Effects */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D] via-[#0D0D0D]/95 to-[#0D0D0D]"></div>
+            <div className="absolute inset-0" style={{
+              backgroundImage: `radial-gradient(circle at 50% 50%, rgba(193, 255, 114, 0.15) 0%, transparent 50%)`
+            }}></div>
+          </div>
+
+          <div className="container mx-auto px-4">
+            <div className="relative grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+              {/* Left Content */}
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C1FF72]/10 border border-[#C1FF72]/20">
+                  <span className="w-2 h-2 rounded-full bg-[#C1FF72] animate-pulse"></span>
+                  <span className="text-sm font-medium text-[#C1FF72]">Expert Gaming Insights</span>
+                </div>
+                
+                <h2 className="text-4xl font-bold leading-tight">
+                  Master the Art of 
+                  <span className="block text-[#C1FF72] mt-1">Online Casino Gaming</span>
+                </h2>
+                
+                <p className="text-lg text-gray-400 leading-relaxed">
+                  Dive into the world of online casinos with confidence. Our comprehensive guides and expert advice will help you navigate the best gaming opportunities and maximize your chances of success.
+                </p>
+
+                <div className="flex flex-wrap gap-6 pt-2">
+                  <Link 
+                    href="/game-guides" 
+                    className="inline-flex items-center px-6 py-3 bg-[#C1FF72] text-black font-semibold rounded-xl hover:bg-[#C1FF72]/90 transition-all duration-300 group"
+                  >
+                    Start Learning
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Right Content - Feature Grid */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-[#1A1A1A] p-6 rounded-2xl border border-[#C1FF72]/10">
+                  <div className="text-[#C1FF72] mb-3">🎮</div>
+                  <h3 className="text-lg font-semibold mb-2">Game Strategies</h3>
+                  <p className="text-gray-400 text-sm">Expert tips and proven tactics for popular casino games</p>
+                </div>
+                
+                <div className="bg-[#1A1A1A] p-6 rounded-2xl border border-[#C1FF72]/10">
+                  <div className="text-[#C1FF72] mb-3">🎁</div>
+                  <h3 className="text-lg font-semibold mb-2">Bonus Tips</h3>
+                  <p className="text-gray-400 text-sm">Maximize your rewards with smart bonus strategies</p>
+                </div>
+                
+                <div className="bg-[#1A1A1A] p-6 rounded-2xl border border-[#C1FF72]/10">
+                  <div className="text-[#C1FF72] mb-3">🛡️</div>
+                  <h3 className="text-lg font-semibold mb-2">Safe Gaming</h3>
+                  <p className="text-gray-400 text-sm">Best practices for secure and responsible gaming</p>
+                </div>
+                
+                <div className="bg-[#1A1A1A] p-6 rounded-2xl border border-[#C1FF72]/10">
+                  <div className="text-[#C1FF72] mb-3">📈</div>
+                  <h3 className="text-lg font-semibold mb-2">Pro Tips</h3>
+                  <p className="text-gray-400 text-sm">Advanced techniques from industry experts</p>
+                </div>
+              </div>
             </div>
           </div>
         </AnimatedSection>

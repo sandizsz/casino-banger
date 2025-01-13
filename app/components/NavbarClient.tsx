@@ -98,9 +98,9 @@ export function NavbarClient({ categories }: NavbarClientProps) {
                 <div className="h-16 w-auto aspect-[2/1] transition-transform duration-300 group-hover:scale-105">
                   <Image
                     src="/images/loco-bonus.png"
-                    alt="Loco Bonus logo"
-                    width={160}
-                    height={80}
+                    alt="BangerSlots logo"
+                    width={220}
+                    height={120}
                     className="object-contain w-full h-full"
                     priority
                   />
