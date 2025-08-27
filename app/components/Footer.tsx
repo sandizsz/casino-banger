@@ -27,6 +27,15 @@ export default function Footer() {
       {/* Gambling Awareness Logos */}
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+          <Link href="#" className="transform hover:scale-110 hover:rotate-2 transition-all duration-300">
+            <Image 
+              src="/images/18+.png" 
+              alt="18+ Logo"
+              width={100}
+              height={50}
+              className="h-12 w-auto object-contain opacity-100 transition-all duration-300"
+            />
+          </Link>
           <Link href="https://www.gamblingtherapy.org" className="transform hover:scale-110 hover:rotate-2 transition-all duration-300">
             <Image 
               src="/images/GAMBLING_THERAPY-logo.png" 
